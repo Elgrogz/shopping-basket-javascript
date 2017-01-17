@@ -15,10 +15,10 @@ var basket = {
     var index = this.items.indexOf(item);
     this.items.splice(index, 1);
     this.calculateValue();
+  },
+  empty: function() {
+    this.items = [];
   }
-  // empty: function() {
-  //   this.items.clear();
-  // }
 }
 
 module.exports = basket;

@@ -31,12 +31,12 @@ describe('Shopping Basket', function() {
     assert.equal(1, basket.items.length);
   })
 
-  // it('can empty basket', function() {
-  //   basket.addItem(items[0]);
-  //   basket.addItem(items[1]);
-  //   basket.empty();
-  //   assert.equal(0, basket.items.length);
-  // });
+  it('can empty basket', function() {
+    basket.addItem(items[0]);
+    basket.addItem(items[1]);
+    basket.empty();
+    assert.equal(0, basket.items.length);
+  });
 
   it('basket value can increase', function() {
     basket.addItem(items[0]);
