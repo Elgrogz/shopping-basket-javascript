@@ -1,4 +1,7 @@
 var basket = require("../basket");
+var item1 = require("../item");
+var item2 = require("../item");
+var item3 = require("../item");
 var assert = require("assert");
 
 describe('Shopping Basket', function() {
@@ -6,6 +9,12 @@ describe('Shopping Basket', function() {
   beforeEach(function() {
     basket.items = [];
     basket.value = 0;
+    item1.name = "beans"; 
+    item1.value = 2; 
+    item2.name = "peas"; 
+    item2.value = 4; 
+    item3.name = "lentils"; 
+    item3.value = 5; 
   });
 
   it('should be empty initially', function() {
@@ -16,9 +25,12 @@ describe('Shopping Basket', function() {
     assert.equal(0, basket.value);
   });
 
-  // it('can add items to basket', function() {
-  //   assert.equal(1, basket.items.length);
-  // });
+  it('can add item to basket', function() {
+    basket.addItem(item1);
+    basket.addItem(item2);
+    assert.equal(2, basket.items.length);
+    // assert.equal("beans", basket[0].name)
+  });
 
 
 })

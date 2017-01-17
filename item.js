@@ -1,5 +1,6 @@
 var item = {
-  name: null
+  name: null,
+  value: 0 
 }
 
 module.exports = item;
