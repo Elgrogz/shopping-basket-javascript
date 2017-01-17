@@ -13,6 +13,6 @@ var item3 = {
   value: 4
 }
 
-var items = [item1, item2, item3];
+var items = [item1, item1, item2, item2, item3, item3, item3];
 
 module.exports = items;

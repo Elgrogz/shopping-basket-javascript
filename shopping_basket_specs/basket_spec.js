@@ -5,7 +5,7 @@ var assert = require("assert");
 describe('Shopping Basket', function() {
 
   beforeEach(function() {
-    basket.items = [];
+    basket.empty();
     basket.value = 0;
   });
 
@@ -36,13 +36,6 @@ describe('Shopping Basket', function() {
     basket.addItem(items[1]);
     basket.empty();
     assert.equal(0, basket.items.length);
-  });
-
-  it('basket value can increase', function() {
-    basket.addItem(items[0]);
-    basket.addItem(items[1]);
-    basket.addItem(items[2]);
-    assert.equal(9, basket.value);
   });
 
 
