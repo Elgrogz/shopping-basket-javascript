@@ -9,8 +9,12 @@ describe('Checkout', function() {
     basket.items = items;
   });
 
-  it('basket value can increase', function() {
-    assert.equal(22, checkout.calculateBasketValue(basket.items));
+  // it('can calculate basket value', function() {
+  //   assert.equal(22.0, checkout.calculateBasketValue(basket.items));
+  // });
+
+  it('can deduct 10% if over £20', function() {
+    assert.equal(19.8, checkout.calculateBasketValue(basket.items));
   });
 
 
