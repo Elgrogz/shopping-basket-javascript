@@ -1,19 +1,14 @@
-var item = require("../item");
+var items = require("../items");
 var assert = require("assert");
 
 describe('Shopping Basket', function() {
 
-  beforeEach(function() {
-    item.name = "beans";
-    item.value = 2;
-  });
-
   it('should have a name', function() {
-    assert.equal("beans", item.name);
+    assert.equal("beans", items[0].name);
   });
 
   it('should have a value', function() {
-    assert.equal(2, item.value);
+    assert.equal(2, items[0].value);
   });
 
 })

@@ -1,7 +1,5 @@
 var basket = require("../basket");
-var item1 = require("../item");
-var item2 = require("../item");
-var item3 = require("../item");
+var items = require("../items");
 var assert = require("assert");
 
 describe('Shopping Basket', function() {
@@ -9,12 +7,6 @@ describe('Shopping Basket', function() {
   beforeEach(function() {
     basket.items = [];
     basket.value = 0;
-    item1.name = "beans"; 
-    item1.value = 2; 
-    item2.name = "peas"; 
-    item2.value = 4; 
-    item3.name = "lentils"; 
-    item3.value = 5; 
   });
 
   it('should be empty initially', function() {
@@ -26,25 +18,32 @@ describe('Shopping Basket', function() {
   });
 
   it('can add item to basket', function() {
-    basket.addItem(item1);
-    basket.addItem(item2);
+    basket.addItem(items[0]);
+    basket.addItem(items[1]);
     assert.equal(2, basket.items.length);
-    // assert.equal("beans", basket[0].name)
+    assert.equal("beans", basket.items[0].name)
   });
 
   it('can remove item from basket', function() {
-    basket.addItem(item1);
-    basket.addItem(item2);
-    basket.removeItem(item2);
+    basket.addItem(items[0]);
+    basket.addItem(items[1]);
+    basket.removeItem(basket.items[1]);
     assert.equal(1, basket.items.length);
   })
 
-  // it('basket value increase', function() {
-  //   basket.addItem(item1);
-  //   basket.addItem(item2);
-  //   basket.addItem(item3);
-  //   assert.equal(11, basket.value);
+  // it('can empty basket', function() {
+  //   basket.addItem(items[0]);
+  //   basket.addItem(items[1]);
+  //   basket.empty();
+  //   assert.equal(0, basket.items.length);
   // });
+
+  it('basket value can increase', function() {
+    basket.addItem(items[0]);
+    basket.addItem(items[1]);
+    basket.addItem(items[2]);
+    assert.equal(9, basket.value);
+  });
 
 
 })
