@@ -32,5 +32,19 @@ describe('Shopping Basket', function() {
     // assert.equal("beans", basket[0].name)
   });
 
+  it('can remove item from basket', function() {
+    basket.addItem(item1);
+    basket.addItem(item2);
+    basket.removeItem(item2);
+    assert.equal(1, basket.items.length);
+  })
+
+  // it('basket value increase', function() {
+  //   basket.addItem(item1);
+  //   basket.addItem(item2);
+  //   basket.addItem(item3);
+  //   assert.equal(11, basket.value);
+  // });
+
 
 })
