@@ -1,6 +1,7 @@
 var checkout = require("../checkout");
 var basket = require("../basket");
 var items = require("../items");
+var customer = require("../customer")
 var assert = require("assert");
 
 describe('Checkout', function() {
