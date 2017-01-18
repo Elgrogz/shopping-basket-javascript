@@ -9,9 +9,12 @@ describe('Shopping Basket', function() {
     customer.hasDiscountCard = true;
   });
 
+  it('can have a name', function() {
+    assert.equal("Gregor", customer.name);
+  })
+
   it('can have discount card', function() {
     assert.equal(true, customer.hasDiscountCard);
   });
-
 
 });

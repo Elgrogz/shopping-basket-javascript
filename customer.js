@@ -1,5 +1,6 @@
 var customer = {
-  hasDiscountCard: null
+  name: "Gregor",
+  hasDiscountCard: true
 }
 
 module.exports = customer;
