@@ -13,8 +13,8 @@ var checkout = {
   },
 
   applyDiscountIfCustomerHasCard: function() {
-    if (this.customer.hasDiscountCard) {
-      this.cost * 0.95;
+    if (this.customer != null && this.customer.hasDiscountCard) {
+      this.cost *= 0.95;
     }
   },
 
@@ -25,6 +25,7 @@ var checkout = {
     }
     this.applyDiscountIfOverTwenty();
     this.applyDiscountIfCustomerHasCard();
+    this.cost = Math.round(this.cost * 100) / 100;
     return this.cost;
   }
 

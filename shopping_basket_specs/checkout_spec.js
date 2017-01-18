@@ -8,6 +8,7 @@ describe('Checkout', function() {
 
   beforeEach(function() {
     basket.items = items;
+    checkout.customer = null;
   });
 
   it('can add customer', function() {
@@ -26,7 +27,7 @@ describe('Checkout', function() {
 
   it('can deduct 5% after other discounts if customer has loyalty card', function() {
     checkout.addCustomer(customer);
-    assert.equal(18.8, checkout.calculateBasketValue(basket.items));
+    assert.equal(18.81, checkout.calculateBasketValue(basket.items));
   });
 
 })
