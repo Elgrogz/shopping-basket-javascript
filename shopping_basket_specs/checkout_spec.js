@@ -30,4 +30,8 @@ describe('Checkout', function() {
     assert.equal(18.81, checkout.calculateBasketValue(basket.items));
   });
 
+  // it('can calculate BOGOF discount') {
+    
+  // }
+
 })
